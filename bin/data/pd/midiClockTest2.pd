@@ -1,4 +1,4 @@
-#N canvas 63 122 1440 661 10;
+#N canvas 532 337 1540 806 10;
 #X msg 171 112 12;
 #X obj 32 120 clockObj/clockDivide;
 #X obj 32 62 loadbang;
@@ -166,17 +166,23 @@
 #X obj 34 256 r arpTrigger;
 #X obj 250 66 s arpTrigger;
 #X obj 420 84 spigot;
-#X obj 453 37 r listSize;
+#X obj 453 2 r listSize;
 #X obj 403 111 s clock_reset;
 #X obj 353 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 453 60 == 0;
+#X obj 453 40 == 0;
 #X obj 510 84 sel 0;
 #X obj 645 116 t f f f;
 #X obj 49 548 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 2;
 #X msg 32 96 24;
 #X msg 88 314 0;
+#X obj 493 40 == 1;
+#X obj 469 65 &&;
+#X obj 493 21 r retrigger;
+#X obj 911 86 s retrigger;
+#X msg 912 44 0;
+#X msg 949 44 1;
 #X connect 1 0 49 0;
 #X connect 2 0 60 0;
 #X connect 2 0 0 0;
@@ -233,10 +239,15 @@
 #X connect 52 0 54 0;
 #X connect 52 0 55 0;
 #X connect 53 0 56 0;
-#X connect 56 0 52 1;
+#X connect 56 0 63 1;
 #X connect 57 1 52 0;
 #X connect 58 0 33 0;
 #X connect 58 1 57 0;
 #X connect 58 2 24 0;
 #X connect 60 0 1 0;
 #X connect 61 0 10 1;
+#X connect 62 0 63 0;
+#X connect 63 0 52 1;
+#X connect 64 0 62 0;
+#X connect 66 0 65 0;
+#X connect 67 0 65 0;
