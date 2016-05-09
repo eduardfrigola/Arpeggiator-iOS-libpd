@@ -151,7 +151,7 @@
 #X msg 187 488 \$1 0;
 #X obj 185 410 t f f b;
 #X obj 473 417 s listSize;
-#X obj 89 341 r listSize;
+#X obj 89 291 r listSize;
 #X obj 95 387 r listSize;
 #X obj 289 197 s notesList;
 #X obj 526 189 s clearList;
@@ -173,9 +173,12 @@
 #X obj 453 60 == 0;
 #X obj 510 84 sel 0;
 #X obj 645 116 t f f f;
-#X msg 32 96 48;
+#X obj 49 548 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X msg 32 96 24;
+#X msg 88 314 0;
 #X connect 1 0 49 0;
-#X connect 2 0 59 0;
+#X connect 2 0 60 0;
 #X connect 2 0 0 0;
 #X connect 2 0 3 0;
 #X connect 5 0 7 0;
@@ -208,6 +211,7 @@
 #X connect 29 0 18 0;
 #X connect 30 0 29 1;
 #X connect 32 0 47 0;
+#X connect 32 0 59 0;
 #X connect 33 0 40 0;
 #X connect 33 1 41 0;
 #X connect 34 0 35 0;
@@ -217,6 +221,7 @@
 #X connect 36 1 15 0;
 #X connect 36 2 34 0;
 #X connect 38 0 12 1;
+#X connect 38 0 61 0;
 #X connect 39 0 44 0;
 #X connect 42 0 28 0;
 #X connect 43 0 5 0;
@@ -233,4 +238,5 @@
 #X connect 58 0 33 0;
 #X connect 58 1 57 0;
 #X connect 58 2 24 0;
-#X connect 59 0 1 0;
+#X connect 60 0 1 0;
+#X connect 61 0 10 1;
